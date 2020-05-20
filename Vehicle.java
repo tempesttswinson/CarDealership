@@ -5,10 +5,11 @@ public class Vehicle {
     private String VIN, make, model, color;
     private double wholesaleCost, retailPrice;
     private int modelYear;
+    private VehicleClassification vehicleClass;
 
     // Our constructor with all properties given
     public Vehicle(String VIN, double wholesaleCost, double retailPrice, int modelYear, String make, String model,
-            String color) {
+            String color, VehicleClassification vehicleCLass) {
         this.VIN = VIN;
         this.wholesaleCost = wholesaleCost;
         this.retailPrice = retailPrice;
@@ -16,6 +17,7 @@ public class Vehicle {
         this.make = make;
         this.model = model;
         this.color = color;
+        this.vehicleClass = vehicleCLass;
 
     }
 
@@ -48,6 +50,10 @@ public class Vehicle {
         return color;
     }
 
+    public VehicleClassification getVehicleClassification() {
+        return vehicleClass;
+    }
+
     // Setters
 
     public void setVin(String VIN) {
@@ -78,14 +84,26 @@ public class Vehicle {
         this.color = color;
     }
 
+    public void setVehicleClassification(VehicleClassification vehicleClass) {
+        this.vehicleClass = vehicleClass;
+    }
+
     // Annotation telling us and compliler that we are overriding previously defined
     // behavior
     @Override
     public String toString() {
         return this.getModelYear() + " " + this.getMake() + " " + this.getModel();
     }
+    // Example: 2018 Kia Sorrento
 
     public double getTargetMargin() {
         return this.retailPrice - this.wholesaleCost;
     }
+
+    // oUR OWN CUSTOM ENUMERATION
+    public enum VehicleClassification {
+        // Convention is to name enum options in all UPER CASE
+        NEW, USED, OFF_LEASE, SHUTTLE, LOANER,
+    }
+
 }
