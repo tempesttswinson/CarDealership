@@ -20,11 +20,12 @@ public abstract class Department {
         for (Department d : depts) {
             // Print out name of dept and return if that dept is open today
             System.out.println(d.toString() + " is open today?" + d.isOpenToday(today));
-        }
-        // Use instance of keyword to test if item in List is of a certain object or
-        // data
-        if (d instanceof ServiceDepartment) {
-            System.out.println(d.toString() + " only closes on Sunday");
+
+            // Use instance of keyword to test if item in List is of a certain object or
+            // data
+            if (d instanceof ServiceDepartment) {
+                System.out.println(d.toString() + " only closes on Sunday");
+            }
         }
     }
 

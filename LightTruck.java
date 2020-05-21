@@ -1,4 +1,3 @@
-package CarDealership;
 
 public class LightTruck extends Vehicle {
     // properties

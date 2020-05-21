@@ -1,4 +1,3 @@
-package CarDealership;
 
 public class Vehicle {
     // Class properties
