@@ -8,6 +8,7 @@ public class SalesDepartment {
 
     @Override
     public boolean isOpenToday(LocalDateTime day) {
+        // Sales is open 7 days a week
         return true;
     }
 }
