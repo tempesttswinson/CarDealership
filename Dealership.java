@@ -19,9 +19,10 @@ public class Dealership {
 
         // Department.printIsOpen(depts, LocalDateTime.now());
 
-        Leaseable lease = new Car("52430899FD", 33000.00, 42000.00, 2019, "Chevrolet", "Impala", "White",
-                VehicleClassification.NEW);
+        // Leaseable lease = new Car("52430899FD", 33000.00, 42000.00, 2019,
+        // "Chevrolet", "Impala", "White",
+        // VehicleClassification.NEW);
 
-        System.out.println("Number of months to lease: " + lease.getLeaseTerm());
+        // System.out.println("Number of months to lease: " + lease.getLeaseTerm());
     }
 }
